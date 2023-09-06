@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/jaiswaladi246/fullstack-bank.git'
+                git branch: 'main', url: 'https://github.com/writetoritika/fullstack-bank.git'
             }
         }
         
@@ -62,7 +62,7 @@ pipeline {
             }
         }
         
-        stage('Deploy to Conatiner') {
+        stage('Deploy to Container') {
             steps {
                 sh "npm run compose:up -d"
             }
